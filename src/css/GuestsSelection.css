@@ -1,0 +1,70 @@
+.clear-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #9d9d9d;
+  cursor: pointer;
+}
+.guests-picker-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.guests-picker-wrapper > div {
+  display: flex;
+}
+.guests-picker-wrapper > div > p {
+  height: 40px;
+  width: 40px;
+  margin: 0;
+  text-align: center;
+  padding-top: 8px;
+  font-size: 16px;
+}
+.guests-picker-btn {
+  margin: 0 10px;
+  border-radius: 4px;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: solid 1px #434343;
+  cursor: pointer;
+}
+.disabled-guests-picker-btn {
+  margin: 0 10px;
+  border-radius: 4px;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: solid 1px #dfdfdf;
+  color: #dfdfdf;
+  cursor: not-allowed;
+}
+.guests-picker-last-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.guests-picker-skip {
+  width: 100px;
+  height: 48px;
+  border-radius: 4px;
+  padding: 12px 32px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+.guests-picker-next {
+  width: 220px;
+  height: 48px;
+  padding: 12px, 32px;
+  border: none;
+  border-radius: 4px;
+  background-color: #c4c4c4;
+  color: white;
+  cursor: not-allowed;
+}
+.guests-picker-next-active {
+  background-color: #212628 !important;
+  cursor: pointer;
+}

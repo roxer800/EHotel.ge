@@ -1,0 +1,31 @@
+.active-bookings-wrapper {
+  text-align: center;
+  margin: auto;
+  margin-top: 32px;
+  border-radius: 8px;
+  width: 300px;
+  height: 44px;
+  background-color: #f5f5f5;
+}
+.active-bookings-btn-active {
+  width: 140px;
+  height: 32px;
+  padding: 4px 16px;
+  border: none;
+  border-radius: 3px;
+  background-color: #212628;
+  color: white;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.active-bookings-btn {
+  width: 140px;
+  height: 32px;
+  padding: 4px 16px;
+  border: none;
+  border-radius: 3px;
+  background-color: transparent;
+  color: #434343;
+  margin-top: 5px;
+  cursor: pointer;
+}

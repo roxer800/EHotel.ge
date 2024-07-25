@@ -1,0 +1,157 @@
+.favorites-header {
+  display: flex;
+  margin: 20px 10px;
+  justify-content: space-between;
+}
+.favorites-header > p {
+  margin: 0;
+  margin-top: 5px;
+  color: #c4c4c4;
+}
+.favorites-header > h3 {
+  margin: 0;
+}
+.favorites-card-body-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.favorites-card-body {
+  position: relative;
+}
+.card-heart {
+  position: absolute;
+  z-index: 2;
+  top: 10px;
+  right: 10px;
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  border-radius: 3px;
+  text-align: center;
+  cursor: pointer;
+}
+.card-heart > i {
+  padding-top: 20px;
+  color: #f05353;
+}
+.on-map {
+  position: absolute;
+  z-index: 2;
+  width: 93px;
+  height: 32px;
+  top: 152px;
+  right: 10px;
+  border-radius: 3px;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+.on-map > span {
+  font-size: 14px;
+  font-weight: 500;
+  margin-left: 5px;
+}
+.card-discount {
+  position: absolute;
+  top: 12px;
+  width: 69px;
+  height: 32px;
+  background-color: #ffd363;
+}
+.card-discount > p {
+  margin: 0;
+  padding-top: 6px;
+  padding-left: 15px;
+}
+.favorites-card-image {
+  width: 328px;
+  height: 196px;
+  border-radius: 4px;
+}
+.card-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #212628;
+}
+.single-star {
+  color: #ffd43b;
+}
+.card-content-first-section {
+  display: flex;
+  justify-content: space-between;
+}
+.card-reviews {
+  margin-left: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #9d9d9d;
+}
+.card-content-second-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.free-cancelation {
+  display: flex;
+  color: #208e17;
+  background-color: #e7f5e6;
+}
+.free-cancelation > div {
+  margin-right: 5px;
+  width: 17px;
+  height: 17px;
+  border: solid 2px #208e17;
+  border-radius: 100%;
+}
+.free-cancelation > div > i {
+  padding-top: 1px;
+  padding-left: 1.5px;
+}
+.price {
+  font-size: 20px;
+  font-weight: 500;
+}
+.night {
+  color: #c4c4c4;
+}
+.card-content-hr {
+  margin: 25px 0;
+  color: #ededed;
+}
+.star-rating {
+  margin-top: -2px;
+}
+.alert-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.alert {
+  width: 328px;
+  height: 48px;
+  border-radius: 4px;
+  padding: 12px 16px;
+  color: white;
+  background-color: #212628;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.alert > button {
+  border: none;
+  background-color: transparent;
+  color: #98aaf7;
+  cursor: pointer;
+}
+
+.custom-message .ant-message-notice-content {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+.ant-message {
+  top: auto !important;
+  bottom: 40px !important;
+
+  z-index: 1000;
+}
