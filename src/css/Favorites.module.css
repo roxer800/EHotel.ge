@@ -1,24 +1,25 @@
-.favorites-header {
+.favoritesHeader {
   display: flex;
   margin: 20px 10px;
   justify-content: space-between;
 }
-.favorites-header > p {
+.favoritesHeader > p {
   margin: 0;
   margin-top: 5px;
   color: #c4c4c4;
 }
-.favorites-header > h3 {
+.favoritesHeader > h3 {
   margin: 0;
 }
-.favorites-card-body-wrapper {
+.favoritesCardBodyWrapper {
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
-.favorites-card-body {
+.favoritesCardBody {
   position: relative;
 }
-.card-heart {
+.cardHeart {
   position: absolute;
   z-index: 2;
   top: 10px;
@@ -30,11 +31,18 @@
   text-align: center;
   cursor: pointer;
 }
-.card-heart > i {
+.heartIcon {
   padding-top: 20px;
   color: #f05353;
 }
-.on-map {
+.heartIconUnselected {
+  padding-top: 20px;
+  color: white;
+}
+.singleStar {
+  color: #ffd43b;
+}
+.onMap {
   position: absolute;
   z-index: 2;
   width: 93px;
@@ -46,64 +54,73 @@
   padding: 4px 8px;
   cursor: pointer;
 }
-.on-map > span {
+.onMap > span {
   font-size: 14px;
   font-weight: 500;
   margin-left: 5px;
 }
-.card-discount {
+.cardDiscount {
   position: absolute;
   top: 12px;
   width: 69px;
   height: 32px;
   background-color: #ffd363;
 }
-.card-discount > p {
+.cardDiscount > p {
   margin: 0;
   padding-top: 6px;
   padding-left: 15px;
 }
-.favorites-card-image {
+.favoritesCardImage {
   width: 328px;
   height: 196px;
   border-radius: 4px;
 }
-.card-name {
+.cardName {
   font-size: 16px;
   font-weight: 500;
   color: #212628;
 }
-.single-star {
-  color: #ffd43b;
-}
-.card-content-first-section {
+
+.cardContentFirstSection {
   display: flex;
   justify-content: space-between;
 }
-.card-reviews {
+.checkInWrapper {
+  display: block;
+}
+.checkInDates {
+  display: flex;
+  font-size: 14px;
+  color: #aaaaaa;
+}
+.checkInDates > p {
+  margin: 4px 0;
+}
+.cardReviews {
   margin-left: 5px;
   font-size: 16px;
   font-weight: 500;
   color: #9d9d9d;
 }
-.card-content-second-section {
+.cardContentSecondSection {
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
 }
-.free-cancelation {
+.freeCancelation {
   display: flex;
   color: #208e17;
   background-color: #e7f5e6;
 }
-.free-cancelation > div {
+.freeCancelation > div {
   margin-right: 5px;
   width: 17px;
   height: 17px;
   border: solid 2px #208e17;
   border-radius: 100%;
 }
-.free-cancelation > div > i {
+.freeCancelation > div > i {
   padding-top: 1px;
   padding-left: 1.5px;
 }
@@ -114,14 +131,14 @@
 .night {
   color: #c4c4c4;
 }
-.card-content-hr {
+.cardContentHr {
   margin: 25px 0;
   color: #ededed;
 }
-.star-rating {
+.starRating {
   margin-top: -2px;
 }
-.alert-wrapper {
+.alertWrapper {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -143,15 +160,49 @@
   color: #98aaf7;
   cursor: pointer;
 }
-
-.custom-message .ant-message-notice-content {
-  border: none !important;
-  box-shadow: none !important;
-  background: transparent !important;
+.activeBookingsWrapper {
+  text-align: center;
+  margin: auto;
+  margin-top: 32px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  width: 300px;
+  height: 44px;
+  background-color: #f5f5f5;
 }
-.ant-message {
-  top: auto !important;
-  bottom: 40px !important;
 
-  z-index: 1000;
+.activeBookingsBtnActive {
+  width: 140px;
+  height: 32px;
+  padding: 4px 16px;
+  border: none;
+  border-radius: 3px;
+  background-color: #212628;
+  color: white;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.activeBookingsBtn {
+  width: 140px;
+  height: 32px;
+  padding: 4px 16px;
+  border: none;
+  border-radius: 3px;
+  background-color: transparent;
+  color: #434343;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.cardHeartUnselected {
+  position: absolute;
+  z-index: 2;
+  top: 10px;
+  right: 10px;
+  height: 40px;
+  width: 40px;
+  background-color: #2126284d;
+  border-radius: 3px;
+  text-align: center;
+  cursor: pointer;
 }

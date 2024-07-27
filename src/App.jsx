@@ -1,11 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import AppLayout from "./ui/AppLayout";
 import Content from "./ui/Content";
 import Favorites from "./ui/Favorites";
 import Location from "./ui/Location";
 import Settings from "./ui/Settings";
 import SearchPage from "./ui/SearchPage";
+import PageNotFound from "./ui/PageNotFound";
 function App() {
   const [db, setDb] = useState([
     {
@@ -18,6 +19,14 @@ function App() {
       cancelation: true,
       isFavorite: false,
       discount: "0",
+      booked: true,
+      city: "Tbilisi",
+      region: "Tbilisi",
+      country: "Georgia",
+      position: {
+        lat: 41.716667,
+        lng: 44.783333,
+      },
     },
     {
       id: 2,
@@ -29,6 +38,14 @@ function App() {
       cancelation: false,
       isFavorite: false,
       discount: "40",
+      booked: false,
+      city: "Tbilisi",
+      region: "Tbilisi",
+      country: "Georgia",
+      position: {
+        lat: 41.716667,
+        lng: 44.783333,
+      },
     },
     {
       id: 3,
@@ -40,30 +57,29 @@ function App() {
       cancelation: false,
       isFavorite: false,
       discount: "0",
+      booked: false,
+      city: "Batumi",
+      region: "Adjara",
+      country: "Georgia",
+      position: {
+        lat: 41.643414,
+        lng: 41.6399,
+      },
     },
   ]);
 
   const [previousState, setPreviousState] = useState(null);
 
   const handleHeartClick = () => {
-    
     setPreviousState([...db]);
   };
 
   const undoChange = () => {
     if (previousState) {
       setDb(previousState);
-      setPreviousState(null); 
+      setPreviousState(null);
     }
   };
-
-  function removeFavorite(id) {
-    setDb((prevCards) =>
-      prevCards.map((card) =>
-        card.id === id ? { ...card, isFavorite: false } : card
-      )
-    );
-  }
 
   const updateRating = (id, newRating) => {
     setDb((prevCards) =>
@@ -99,16 +115,26 @@ function App() {
                 setDb={setDb}
                 toggleFavorite={toggleFavorite}
                 updateRating={updateRating}
-                removeFavorite={removeFavorite}
                 undoChange={undoChange}
                 handleHeartClick={handleHeartClick}
               />
             }
           />
-          <Route path="location" element={<Location />} />
+          <Route
+            path="location"
+            element={
+              <Location
+                db={db}
+                toggleFavorite={toggleFavorite}
+                handleHeartClick={handleHeartClick}
+              />
+            }
+          />
+
           <Route path="settings" element={<Settings />} />
-          <Route path="Search" element={<SearchPage />} />
+          <Route path="Search" element={<SearchPage db={db} />} />
         </Route>
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
   );

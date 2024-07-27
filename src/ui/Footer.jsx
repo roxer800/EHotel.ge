@@ -1,35 +1,35 @@
 import { NavLink } from "react-router-dom";
 import { Col, Row } from "antd";
-import "../css/Footer.css";
+import styles from "../css/Footer.module.css";
 
 function Footer() {
   return (
-    <div className="footer">
-      <Row className="bottom-div ">
+    <div className={styles.footer}>
+      <Row className={styles.bottomDiv}>
         <Col span={6}>
-          <NavLink to="/" activeclassname="active">
-            <button className="footer-btn">
+          <NavLink to="/" activeclassname={styles.active}>
+            <button className={styles.footerBtn}>
               <i className=" fa-solid fa-magnifying-glass fa-2xl"></i>
             </button>
           </NavLink>
         </Col>
         <Col span={6}>
-          <NavLink to="favorites" activeclassname="active">
-            <button className="footer-btn">
+          <NavLink to="favorites" activeclassname={styles.active}>
+            <button className={styles.footerBtn}>
               <i className="  fa-regular fa-heart  fa-2xl"></i>
             </button>
           </NavLink>
         </Col>
         <Col span={6}>
-          <NavLink to="location" activeclassname="active">
-            <button className="footer-btn">
+          <NavLink to="location" activeclassname={styles.active}>
+            <button className={styles.footerBtn}>
               <i className="  fa-solid fa-location-dot  fa-2xl"></i>
             </button>
           </NavLink>
         </Col>
         <Col span={6}>
-          <NavLink to="settings" activeclassname="active">
-            <button className="footer-btn">
+          <NavLink to="settings" activeclassname={styles.active}>
+            <button className={styles.footerBtn}>
               <i className="  fa-solid fa-gear  fa-2xl"></i>
             </button>
           </NavLink>

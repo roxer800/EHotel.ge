@@ -1,4 +1,4 @@
-.settings-input {
+.settingsInput {
   display: flex;
   justify-content: space-between;
   background-color: #f5f5f5;
@@ -6,24 +6,22 @@
   border-radius: 4px;
   cursor: pointer;
 }
-.settings-input > p {
+.settingsInput > p {
   margin: 0;
 }
-.width {
-  width: 100% !important;
-}
-.active-settings-tab {
+
+.activeSettingsTab {
   background-color: #f5f5f5;
 }
-.select-settings-div {
+.selectSettingsDiv {
   padding: 10px 5px;
   cursor: pointer;
   width: 100%;
 }
-.select-settings-div:hover {
+.selectSettingsDiv:hover {
   background-color: #f5f5f5;
   transition: 0.3s;
 }
-.select-settings-div > p {
+.selectSettingsDiv > p {
   margin: 0;
 }

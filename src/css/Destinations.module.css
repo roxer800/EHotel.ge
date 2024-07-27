@@ -1,0 +1,27 @@
+.destinationsWrapper {
+  display: flex;
+}
+.test {
+  margin: auto;
+}
+.destinationsContent {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+.destinationsIcon {
+  margin-top: 25px;
+}
+.destinationsCity,
+.destinationsRegion {
+  margin: 0;
+  margin-bottom: 5px !important;
+}
+.destinationsRegion {
+  color: #9d9d9d;
+}
+.destinationsHotelname {
+  margin: 0;
+  margin-top: 6px;
+}

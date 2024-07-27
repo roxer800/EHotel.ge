@@ -5,12 +5,12 @@
 .active > button > i {
   color: black !important;
 }
-.bottom-div {
+.bottomDiv {
   width: 100%;
   padding-top: 10px;
   background-color: white;
 }
-.footer-btn {
+.footerBtn {
   width: 100%;
   height: 40px;
   border: none;
@@ -18,7 +18,7 @@
   color: #dcdcdc;
   cursor: pointer;
 }
-.footer-btn:hover {
+.footerBtn:hover {
   border-bottom: solid 2px #ffd363 !important;
   color: black !important;
 }

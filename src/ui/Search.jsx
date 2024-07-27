@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
-import "../css/Search.css";
+import styles from "../css/Search.module.css";
 import GuestSelection from "./GuestSelection";
 
 function Search() {
@@ -17,42 +17,42 @@ function Search() {
     <>
       <form action="/">
         <div className="container">
-          <div className="form-input">
+          <div className={styles.formInput}>
             <span>
               <i className="fa-xl fa-solid fa-magnifying-glass"></i>
             </span>
             <NavLink to="Search">
               <input
-                className="input-1"
+                className={styles.input1}
                 type="text"
                 placeholder="Enter your destination"
                 readOnly
               />
             </NavLink>
           </div>
-          <div className="form-input">
+          <div className={styles.formInput}>
             <span>
               <i className="fa-xl fa-regular fa-calendar"></i>
             </span>
             <input
-              className="input-2"
+              className={styles.input2}
               type="text"
               placeholder="Enter your Dates"
             />
           </div>
-          <div className="form-input">
+          <div className={styles.formInput}>
             <span>
               <i className="fa-xl fa-solid fa-user-group"></i>
             </span>
             <input
               onClick={showDrawer}
-              className="input-3"
+              className={styles.input3}
               type="text"
               placeholder={`${countAdults} Adults, ${countChildren} Children`}
               readOnly
             />
           </div>
-          <button className="form-button" type="submit">
+          <button className={styles.formButton} type="submit">
             Search
           </button>
         </div>

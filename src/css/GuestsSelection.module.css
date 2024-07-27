@@ -1,4 +1,4 @@
-.clear-btn {
+.clearBtn {
   background-color: transparent;
   border: none;
   font-size: 16px;
@@ -6,14 +6,14 @@
   color: #9d9d9d;
   cursor: pointer;
 }
-.guests-picker-wrapper {
+.guestsPickerWrapper {
   display: flex;
   justify-content: space-between;
 }
-.guests-picker-wrapper > div {
+.guestsPickerWrapper > div {
   display: flex;
 }
-.guests-picker-wrapper > div > p {
+.guestsPickerWrapper > div > p {
   height: 40px;
   width: 40px;
   margin: 0;
@@ -21,7 +21,7 @@
   padding-top: 8px;
   font-size: 16px;
 }
-.guests-picker-btn {
+.guestsPickerBtn {
   margin: 0 10px;
   border-radius: 4px;
   width: 40px;
@@ -30,7 +30,7 @@
   border: solid 1px #434343;
   cursor: pointer;
 }
-.disabled-guests-picker-btn {
+.disabledGuestsPickerBtn {
   margin: 0 10px;
   border-radius: 4px;
   width: 40px;
@@ -40,12 +40,12 @@
   color: #dfdfdf;
   cursor: not-allowed;
 }
-.guests-picker-last-section {
+.guestsPickerLastSection {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
-.guests-picker-skip {
+.guestsPickerSkip {
   width: 100px;
   height: 48px;
   border-radius: 4px;
@@ -54,7 +54,7 @@
   border: none;
   cursor: pointer;
 }
-.guests-picker-next {
+.guestsPickerNext {
   width: 220px;
   height: 48px;
   padding: 12px, 32px;
@@ -64,7 +64,7 @@
   color: white;
   cursor: not-allowed;
 }
-.guests-picker-next-active {
+.guestsPickerNextActive {
   background-color: #212628 !important;
   cursor: pointer;
 }

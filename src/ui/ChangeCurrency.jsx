@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Modal, Radio, Space } from "antd";
 import { UpOutlined } from "@ant-design/icons";
-import "../css/Settings.css";
+import styles from "../css/Settings.module.css";
 
 function ChangeCurrency() {
   const [isModalOpenCurrency, setIsModalOpenCurrency] = useState(false);
@@ -29,7 +29,7 @@ function ChangeCurrency() {
     <div>
       <div>
         <p>Change Currency</p>
-        <div onClick={showModal} className=" settings-input">
+        <div onClick={showModal} className={styles.settingsInput}>
           <p>{currency}</p>
           <i className="fa-solid fa-chevron-down"></i>
         </div>
@@ -48,9 +48,10 @@ function ChangeCurrency() {
             <Space direction="vertical" className="width">
               <div>
                 <div
-                  className={`select-settings-div ${
-                    isActiveCurrency === "1" && "active-settings-tab"
-                  }`}
+                  className={
+                    (styles.selectSettingsDiv,
+                    isActiveCurrency === "1" && styles.activeSettingsTab)
+                  }
                   onClick={() => currencySelector("1", "USD")}
                 >
                   <Radio className="width" value={1}>
@@ -58,9 +59,10 @@ function ChangeCurrency() {
                   </Radio>
                 </div>
                 <div
-                  className={`select-settings-div ${
-                    isActiveCurrency === "2" && "active-settings-tab "
-                  }`}
+                  className={
+                    (styles.selectSettingsDiv,
+                    isActiveCurrency === "2" && styles.activeSettingsTab)
+                  }
                   onClick={() => currencySelector("2", "GEL")}
                 >
                   <Radio className="width" value={2}>
@@ -68,9 +70,10 @@ function ChangeCurrency() {
                   </Radio>
                 </div>
                 <div
-                  className={`select-settings-div${
-                    isActiveCurrency === "3" && "active-settings-tab"
-                  }`}
+                  className={
+                    (styles.selectSettingsDiv,
+                    isActiveCurrency === "3" && styles.activeSettingsTab)
+                  }
                   onClick={() => currencySelector("3", "RUB")}
                 >
                   <Radio className="width" value={3}>

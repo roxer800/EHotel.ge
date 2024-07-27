@@ -1,15 +1,21 @@
 import { Descriptions } from "antd";
-import "../css/SearchPage.css";
+import { useState } from "react";
+import styles from "../css/SearchPage.module.css";
 import SearchPageHeader from "./SearchPageHeader";
 import SearchPageTags from "./SearchPageTags";
+import Destinations from "./Destinations";
+import Map from "./Map";
 
-function SearchPage() {
+function SearchPage({ db }) {
+  const [searchText, setSearchText] = useState("");
+
   return (
-    <>
-      <SearchPageHeader />
+    <div className="container">
+      <SearchPageHeader searchText={searchText} setSearchText={setSearchText} />
       <SearchPageTags />
-      <Descriptions />
-    </>
+      <Destinations db={db} searchText={searchText} />
+      <Map />
+    </div>
   );
 }
 

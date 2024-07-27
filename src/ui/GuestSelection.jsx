@@ -1,6 +1,5 @@
 import { Drawer } from "antd";
-
-import "../css/GuestsSelection.css";
+import styles from "../css/GuestsSelection.module.css";
 
 function GuestSelection({
   open,
@@ -37,7 +36,7 @@ function GuestSelection({
       }}
     >
       <span>Select rooms and guests</span>
-      <button className="clear-btn" onClick={Clear}>
+      <button className={styles.clearBtn} onClick={Clear}>
         Clear
       </button>
     </div>
@@ -53,13 +52,15 @@ function GuestSelection({
       style={{ borderRadius: "10px" }}
     >
       <div className="">
-        <div className="guests-picker-wrapper">
+        <div className={styles.guestsPickerWrapper}>
           <p>Adults</p>
           <div>
             <button
               onClick={() => decrement(setCountAdults, countAdults)}
               className={
-                countAdults ? "guests-picker-btn" : "disabled-guests-picker-btn"
+                countAdults
+                  ? styles.guestsPickerBtn
+                  : styles.disabledGuestsPickerBtn
               }
             >
               -
@@ -67,21 +68,21 @@ function GuestSelection({
             <p>{countAdults}</p>
             <button
               onClick={() => increment(setCountAdults, countAdults)}
-              className="guests-picker-btn"
+              className={styles.guestsPickerBtn}
             >
               +
             </button>
           </div>
         </div>
-        <div className="guests-picker-wrapper">
+        <div className={styles.guestsPickerWrapper}>
           <p>Children</p>
           <div>
             <button
               onClick={() => decrement(setCountChildren, countChildren)}
               className={
                 countChildren
-                  ? "guests-picker-btn"
-                  : "disabled-guests-picker-btn"
+                  ? styles.guestsPickerBtn
+                  : styles.disabledGuestsPickerBtn
               }
             >
               -
@@ -89,19 +90,19 @@ function GuestSelection({
             <p>{countChildren}</p>
             <button
               onClick={() => increment(setCountChildren, countChildren)}
-              className="guests-picker-btn"
+              className={styles.guestsPickerBtn}
             >
               +
             </button>
           </div>
         </div>
-        <div className="guests-picker-last-section">
-          <button className="guests-picker-skip" onClick={onClose}>
+        <div className={styles.guestsPickerLastSection}>
+          <button className={styles.guestsPickerSkip} onClick={onClose}>
             Skip
           </button>
           <button
-            className={`guests-picker-next ${
-              countAdults && "guests-picker-next-active "
+            className={`${styles.guestsPickerNext} ${
+              countAdults && styles.guestsPickerNextActive
             }`}
             onClick={countAdults && onClose}
           >

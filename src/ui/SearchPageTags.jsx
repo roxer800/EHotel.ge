@@ -1,11 +1,12 @@
+import styles from "../css/SearchPage.module.css";
+
 function SearchPageTags() {
   return (
-    <div className=" tags-wrapper">
+    <div className={styles.tagsWrapper}>
       <hr />
-      <div className=" container tags">
-        <button className="tags-btn-active">Recent</button>
-        <button className="tags-btn">Popular</button>
-        <button className="tags-btn">Nearby</button>
+      <div className={`container ${styles.tags}`}>
+        <button className={styles.tagsBtnActive}>Popular</button>
+        <button className={styles.tagsBtn}>Nearby</button>
       </div>
     </div>
   );

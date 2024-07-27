@@ -5,3 +5,28 @@
 body {
   overflow-y: scroll;
 }
+.width {
+  width: 100% !important;
+}
+/* ფავორიტების ქასტომ მესიჯისთვის */
+
+.customMessage,
+.ant-message-notice-content {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+.ant-message {
+  top: auto !important;
+  bottom: 40px !important;
+  z-index: 1000;
+}
+
+/* Search  გლობალი */
+.dateRangePicker .ant-picker-panel:nth-child(2) {
+  display: none;
+}
+
+.dateRangePicker .ant-picker-panel:nth-child(1) button {
+  visibility: visible !important;
+}

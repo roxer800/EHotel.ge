@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Modal, Radio, Space } from "antd";
 import { UpOutlined } from "@ant-design/icons";
-import "../css/Settings.css";
+import styles from "../css/Settings.module.css";
 function SelectLanguage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isActive, setIsActive] = useState("1");
@@ -31,7 +31,7 @@ function SelectLanguage() {
       <div>
         <div>
           <p>Change language</p>
-          <div onClick={showModal} className="settings-input">
+          <div onClick={showModal} className={styles.settingsInput}>
             <p>{language}</p>
             <i className="fa-solid fa-chevron-down"></i>
           </div>
@@ -46,9 +46,10 @@ function SelectLanguage() {
               <Space direction="vertical" className="width">
                 <div>
                   <div
-                    className={`select-settings-div ${
-                      isActive === "1" && "active-settings-tab "
-                    }`}
+                    className={
+                      (styles.selectSettingsDiv,
+                      isActive === "1" && styles.activeSettingsTab)
+                    }
                     onClick={() => languageSelector("1", "english")}
                   >
                     <Radio className="width" value={1}>
@@ -56,9 +57,10 @@ function SelectLanguage() {
                     </Radio>
                   </div>
                   <div
-                    className={`select-settings-div ${
-                      isActive === "2" && "active-settings-tab "
-                    }`}
+                    className={
+                      (styles.selectSettingsDiv,
+                      isActive === "2" && styles.activeSettingsTab)
+                    }
                     onClick={() => languageSelector("2", "Georgian")}
                   >
                     <Radio className="width" value={2}>
@@ -66,9 +68,10 @@ function SelectLanguage() {
                     </Radio>
                   </div>
                   <div
-                    className={`select-settings-div ${
-                      isActive === "3" && "active-settings-tab "
-                    }`}
+                    className={
+                      (styles.selectSettingsDiv,
+                      isActive === "3" && styles.activeSettingsTab)
+                    }
                     onClick={() => languageSelector("3", "Russian")}
                   >
                     <Radio className="width" value={3}>
